@@ -36,7 +36,7 @@ resource "aws_instance" "web" {
     vpc_security_group_ids = [aws_security_group.web_server.id]
     
     instance_type = "t2.micro"
-    key_name = "EPAM"
+    key_name = "key"
     user_data = <<EOF
 #!/bin/bash
 apt update -y
