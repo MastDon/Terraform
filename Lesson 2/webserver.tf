@@ -18,7 +18,7 @@ ingress {
     to_port = 443
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-}
+
 egress {
 from_port = 0
 to_port = 0
@@ -26,7 +26,7 @@ protocol = "-1"
 cidr_blocks = ["0.0.0.0/0"]
 
 }
-
+}
 
 }
 
@@ -41,7 +41,7 @@ resource "aws_instance" "web" {
 #!/bin/bash
 apt update -y
 apt -y install apache2
-ip a > /var/www/html/index.html
+ip a > /var/www/index.html
 sudo systemctl start apache2
 sudo systemctl enable apache2
 EOF
